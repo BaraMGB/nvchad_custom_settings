@@ -1,3 +1,4 @@
+local overrides = require("custom.configs.overrides")
 local plugins = {
   {
     "neovim/nvim-lspconfig",
@@ -16,6 +17,10 @@ local plugins = {
   },
   {
     "baramgb/nextdev-nvim"
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = overrides.nvimtree,
   }
 }
 

@@ -16,6 +16,10 @@ M.abc = {
     ["<leader>qn"] = {":qa!<cr>"},
     ["<leader>h"] = { ":ClangdSwitchSourceHeader<cr>", "switch header source" },
     ["<leader>t"] = {function() require("nvterm.terminal").new "horizontal"end, "New horizontal term",},
+    ["gn"] = {function ()
+       vim.diagnostic.goto_next({ border = "rounded"})
+     end,
+     "LSP Next Issue",},
   },
   v = {
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
