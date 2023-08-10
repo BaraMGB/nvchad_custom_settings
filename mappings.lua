@@ -12,6 +12,7 @@ M.abc = {
     ["<C-n>"] = {"<cmd> Telescope <CR>", "Telescope"},
     ["<C-s>"] = {":Telescope Files <CR>", "Telescope Files"},
     ["<leader>e"] = {":NvimTreeToggle <CR>", "File Browser"},
+    ["<leader>c"] = {":bd<CR>"},
     ["<S-Down>"] = { "v gj", "visual mode"},
     ["<leader>qn"] = {":qa!<cr>"},
     ["<leader>h"] = { ":ClangdSwitchSourceHeader<cr>", "switch header source" },

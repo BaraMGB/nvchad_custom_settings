@@ -14,9 +14,17 @@ vim.api.nvim_create_autocmd(
 	}
 )
 
+local opt = vim.opt
+opt.shiftwidth = 4
+opt.tabstop = 4
+opt.softtabstop = 4
+
 local M = {}
-M.ui = {theme = 'catppuccin'}
+M.ui = {theme = 'bearded-arc'}
 M.plugins =  "custom.plugins"
 M.mappings = require "custom.mappings"
 
 return M
+
+
+
