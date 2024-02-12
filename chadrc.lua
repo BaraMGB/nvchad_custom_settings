@@ -1,5 +1,7 @@
 ---@type ChadrcConfig 
 --open file at last line position
+require "custom.refactor_function_cpp"
+
 local lastline = vim.api.nvim_create_augroup("jump_last_position", { clear = true })
 vim.api.nvim_create_autocmd(
 	"BufReadPost",
@@ -18,6 +20,7 @@ local opt = vim.opt
 opt.shiftwidth = 4
 opt.tabstop = 4
 opt.softtabstop = 4
+vim.wo.wrap = false
 
 local M = {}
 M.ui = {theme = 'bearded-arc'}

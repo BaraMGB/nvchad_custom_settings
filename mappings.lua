@@ -17,8 +17,10 @@ M.abc = {
     ["<leader>qn"] = {":qa!<cr>"},
     ["<leader>h"] = { ":ClangdSwitchSourceHeader<cr>", "switch header source" },
     ["<leader>t"] = {function() require("nvterm.terminal").new "horizontal"end, "New horizontal term",},
+    ["rf"] = {":lua require('custom.refactor_function_cpp').moveFunctionToCpp()<CR>", "Refactoring"},
     ["gn"] = {function () vim.diagnostic.goto_next({ border = "rounded"}) end,"LSP Next Issue",},
     ["rn"] = {function () vim.lsp.buf.rename() end, "rename symbol",},
+
   },
   v = {
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
